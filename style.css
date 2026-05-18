@@ -244,7 +244,18 @@ nav ul li a:hover {
 .cta-block {
     margin-top: 30px;
 }
+/* ESTILO PARA EL ENLACE DE INSTAGRAM */
+.link-instagram {
+    color: var(--text-claro); /* Se mantendrá blanco/claro como el texto de esa sección */
+    text-decoration: none; /* Le quita la línea subrayada aburrida */
+    font-weight: bold;
+    transition: 0.3s;
+}
 
+.link-instagram:hover {
+    color: var(--color-secundario); /* Al pasar el mouse por encima, se iluminará en dorado mariachi */
+    text-decoration: underline; /* Solo se subraya cuando el usuario pasa el cursor */
+}
 /* FOOTER */
 footer {
     background-color: #050505;
