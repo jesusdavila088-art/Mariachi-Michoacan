@@ -284,3 +284,40 @@ footer {
         font-size: 2rem;
     }
 }
+/* ---- DISEÑO RESPONSIVO PARA TELÉFONOS ---- */
+@media (max-width: 768px) {
+    /* Mostrar el botón de las 3 rayitas */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Ocultar el menú normal y prepararlo para el despliegue */
+    nav ul {
+        display: none; /* Por defecto está escondido */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Se posiciona justo debajo del header */
+        left: 0;
+        width: 100%;
+        background-color: rgba(14, 14, 14, 0.98); /* Fondo negro elegante */
+        border-bottom: 3px solid var(--color-secundario); /* Línea dorada abajo */
+        padding: 20px 0;
+        text-align: center;
+        z-index: 999;
+    }
+
+    /* ESTA ES LA CLAVE: Cuando JavaScript añade "active", el menú SE MUESTRA */
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        display: block;
+        font-size: 1.2rem;
+    }
+}
