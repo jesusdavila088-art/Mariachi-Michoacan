@@ -284,40 +284,44 @@ footer {
         font-size: 2rem;
     }
 }
-/* ---- DISEÑO RESPONSIVO PARA TELÉFONOS ---- */
+/* ---- MEDIA QUERY: DISEÑO PARA TELÉFONOS ---- */
 @media (max-width: 768px) {
-    /* Mostrar el botón de las 3 rayitas */
+    /* 1. Forzar a que aparezca el botón de las 3 rayitas en el teléfono */
     .menu-toggle {
-        display: block;
+        display: block !important;
+        color: var(--color-secundario);
+        font-size: 1.8rem;
         cursor: pointer;
     }
 
-    /* Ocultar el menú normal y prepararlo para el despliegue */
+    /* 2. Ocultar la lista del menú original y prepararla como bloque vertical */
     nav ul {
-        display: none; /* Por defecto está escondido */
+        display: none; /* Se esconde por defecto */
         flex-direction: column;
         position: absolute;
-        top: 70px; /* Se posiciona justo debajo del header */
+        top: 70px;
         left: 0;
         width: 100%;
-        background-color: rgba(14, 14, 14, 0.98); /* Fondo negro elegante */
-        border-bottom: 3px solid var(--color-secundario); /* Línea dorada abajo */
+        background-color: rgba(14, 14, 14, 0.98); /* Fondo negro del mariachi */
+        border-bottom: 3px solid var(--color-secundario);
         padding: 20px 0;
         text-align: center;
         z-index: 999;
     }
 
-    /* ESTA ES LA CLAVE: Cuando JavaScript añade "active", el menú SE MUESTRA */
+    /* 3. CLAVE: Cuando JS añade la clase 'active', el menú se vuelve visible */
     nav ul.active {
-        display: flex;
+        display: flex !important;
     }
 
     nav ul li {
         margin: 15px 0;
+        display: block;
     }
 
     nav ul li a {
         display: block;
         font-size: 1.2rem;
+        color: var(--text-claro);
     }
 }
