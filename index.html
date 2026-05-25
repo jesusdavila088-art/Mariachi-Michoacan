@@ -1,10 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariachi Michoacán </title>
-    <link rel="stylesheet" href="style.css">
+
     <!-- Font Awesome para Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -12,21 +6,20 @@
 
     <!-- NAV / MENÚ DE NAVEGACIÓN -->
     <header>
-    <div class="logo">
-        <h1>Mariachi <span>Michoacán</span></h1>
-    </div>
-    <nav>
-        <div class="menu-toggle" id="mobile-menu">
-            <i class="fas fa-bars"></i>
+        <div class="logo">
+            <h1>Mariachi <span>Michoacán</span></h1>
         </div>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#nosotros">Quiénes Somos</a></li>
-            <li><a href="#galeria">Galería</a></li>
-            <li><a href="#contacto">Contrataciones</a></li>
-        </ul>
-    </nav>
-</header>
+        <button type="button" class="menu-toggle" id="mobile-menu" aria-label="Abrir menú" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Quiénes Somos</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contrataciones</a></li>
+            </ul>
+        </nav>
     </header>
 
     <!-- HERO SECTION (INICIO) -->
@@ -34,7 +27,7 @@
         <div class="hero-content">
             <h2>Calidad y excelencia musical
             <p>Amenizamos todo tipo de eventos sociales en San Cristóbal. ¡Haz de tu celebración un momento inolvidable!</p>
-             <a href="https://wa.me/0424-7306647" target="_blank" class="btn-cta">
+             <a href="https://api.whatsapp.com/send/?phone=584247306647&text&type=phone_number&app_absent=0">
                 <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
             </a>
         </div>
@@ -112,7 +105,7 @@
     <a href="https://www.instagram.com/michoacan.sc/" target="_blank" class="link-instagram">@michoacan.sc</a>
 </p>
                 <div class="cta-block">
-                    <a href="https://w.app/s4e0mg" target="_blank" class="btn-whatsapp-large">
+                    <a href="https://api.whatsapp.com/send/?phone=584247306647&text&type=phone_number&app_absent=0">
                         <i class="fab fa-whatsapp"></i> Reservar Ahora por WhatsApp
                     </a>
                 </div>
