@@ -33,7 +33,7 @@
         <div class="hero-content">
             <h2>Calidad y excelencia musical
             <p>Amenizamos todo tipo de eventos sociales en San Cristóbal. ¡Haz de tu celebración un momento inolvidable!</p>
-             <a href="https://api.whatsapp.com/send/?phone=584247306647&text&type=phone_number&app_absent=0">
+             <a href="https://api.whatsapp.com/send/?phone=584247306647&text&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp-large">
                 <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
             </a>
         </div>
@@ -66,17 +66,17 @@
                 <div class="card">
                     <i class="fas fa-music icon-gold"></i>
                     <h3>Clásicos Inmortales</h3>
-                    <p>El Rey, Volver Volver, Cielito Lindo, Si Nos Dejan, Serenata Huasteca.</p>
+                    <p>El Rey, Volver Volver, Cielito Lindo, Si Nos Dejan, Mujeres Divinas, El Son de la Negra.</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-heart icon-gold"></i>
                     <h3>Para Mamá y Papá</h3>
-                    <p>Amor Eterno, Las Mañanitas, Madrecita Querida, A Mi Manera.</p>
+                    <p>Amor Eterno, Las Mañanitas, Madrecita Querida, Canto a la Madre, Te lo pido por favor.</p>
                 </div>
                 <div class="card">
                     <i class="fas fa-glass-cheers icon-gold"></i>
                     <h3>Para Animación y Baile</h3>
-                    <p>El Aventurero, La Bikina, El Son de la Negra, Guadalajara.</p>
+                    <p>El Aventurero, La Bikina, Yo no fui, Paso Doble "novillero y soy castellana" El Mariachi Loco.</p>
                 </div>
             </div>
         </div>
@@ -86,15 +86,95 @@
     <section id="galeria" class="container">
         <div class="section-title">
             <h2>Galería de Momentos</h2>
-            <p>Así vivimos la pasión de la música en vivo</p>
+            <p>Fotos y videos de nuestros eventos en vivo</p>
         </div>
-        <div class="galeria-grid">
-    <div class="galeria-item"><img src="imagenes/WhatsApp Image 2026-04-20 at 13.47.12.jpeg" alt="Evento 1"></div>
-    <div class="galeria-item"><img src="imagenes/WhatsApp Image 2026-04-20 at 13.49.26.jpeg" alt="Evento 2"></div>
-    <div class="galeria-item"><img src="imagenes/WhatsApp Image 2026-05-16 at 12.12.19.jpeg" alt="Evento 3"></div>
-    <div class="galeria-item"><img src="imagenes/Opera Captura de pantalla_2026-05-18_120035_www.instagram.com.png" alt="Evento 4"></div>
-         </div>
-        </section>
+
+        <div class="galeria-tabs" role="tablist" aria-label="Tipo de galería">
+            <button type="button" class="galeria-tab is-active" role="tab" aria-selected="true" aria-controls="galeria-fotos" id="tab-fotos" data-galeria-tab="fotos">
+                <i class="fas fa-images" aria-hidden="true"></i> Fotos
+            </button>
+            <button type="button" class="galeria-tab" role="tab" aria-selected="false" aria-controls="galeria-videos" id="tab-videos" data-galeria-tab="videos">
+                <i class="fas fa-video" aria-hidden="true"></i> Videos
+            </button>
+        </div>
+
+        <!-- FOTOS: agrega más bloques .carousel-slide con tus imágenes en la carpeta imagenes/ -->
+        <div class="galeria-panel is-active" id="galeria-fotos" role="tabpanel" aria-labelledby="tab-fotos">
+            <h3 class="galeria-subtitle">Fotografías</h3>
+            <div class="galeria-carousel" tabindex="0" aria-roledescription="carousel" aria-label="Carrusel de fotos">
+                <button type="button" class="carousel-btn carousel-prev" aria-label="Foto anterior">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <div class="carousel-slide is-active">
+                            <img src="imagenes/WhatsApp Image 2026-04-20 at 13.47.12.jpeg" alt="Mariachi Michoacán en evento 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenes/WhatsApp Image 2026-04-20 at 13.49.26.jpeg" alt="Mariachi Michoacán en evento 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenes/WhatsApp Image 2026-05-16 at 12.12.19.jpeg" alt="Mariachi Michoacán en evento 3">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="imagenes/imagenfondo.png" alt="Mariachi Michoacán en evento 4">
+                        </div>
+                        <!-- Copia el bloque anterior para más fotos:
+                        <div class="carousel-slide">
+                            <img src="imagenes/tu-foto.jpg" alt="Descripción del evento">
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <button type="button" class="carousel-btn carousel-next" aria-label="Foto siguiente">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+                <div class="carousel-dots" role="tablist" aria-label="Seleccionar foto"></div>
+            </div>
+        </div>
+
+        <!-- VIDEOS: archivos en videos/ o enlaces de YouTube en el iframe -->
+        <div class="galeria-panel" id="galeria-videos" role="tabpanel" aria-labelledby="tab-videos" hidden>
+            <h3 class="galeria-subtitle">Videos</h3>
+            <div class="galeria-carousel galeria-carousel--video" tabindex="0" aria-roledescription="carousel" aria-label="Carrusel de videos">
+                <button type="button" class="carousel-btn carousel-prev" aria-label="Video anterior">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </button>
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <div class="carousel-slide is-active">
+                            <video class="carousel-video" controls preload="metadata" poster="imagenes/WhatsApp Image 2026-04-20 at 13.47.12.jpeg">
+                                <source src="videos/evento-1.mp4" type="video/mp4">
+                                Tu navegador no reproduce video HTML5.
+                            </video>
+                        </div>
+                        <div class="carousel-slide carousel-slide--embed">
+                            <div class="video-embed">
+                                <!-- Cambia VIDEO_ID por el ID de tu video de YouTube (ej: dQw4w9WgXcQ) -->
+                                <iframe
+                                    src="https://www.youtube.com/embed/VIDEO_ID"
+                                    title="Video de Mariachi Michoacán"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <!-- Copia para otro video local:
+                        <div class="carousel-slide">
+                            <video class="carousel-video" controls preload="metadata" poster="imagenes/tu-miniatura.jpg">
+                                <source src="videos/evento-2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        -->
+                    </div>
+                </div>
+                <button type="button" class="carousel-btn carousel-next" aria-label="Video siguiente">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </button>
+                <div class="carousel-dots" role="tablist" aria-label="Seleccionar video"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- CONTACTO / CONTRATACIONES -->
     <section id="contacto" class="bg-dark text-center">
@@ -111,7 +191,7 @@
     <a href="https://www.instagram.com/michoacan.sc/" target="_blank" class="link-instagram">@michoacan.sc</a>
 </p>
                 <div class="cta-block">
-                    <a href="https://api.whatsapp.com/send/?phone=584247306647&text&type=phone_number&app_absent=0">
+                    <a href="https://api.whatsapp.com/send/?phone=584247306647&text&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp-large">
                         <i class="fab fa-whatsapp"></i> Reservar Ahora por WhatsApp
                     </a>
                 </div>

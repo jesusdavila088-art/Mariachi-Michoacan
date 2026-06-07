@@ -6,7 +6,22 @@
     --text-claro: #f4f4f4;
     --text-oscuro: #333;
 }
+/* --- STICKER ESTILOS --- */
+.sticker-container {
+    position: fixed; /* Mantiene la imagen en la misma posición en la pantalla, incluso al hacer scroll */
+    top: 10px; /* Ajusta la distancia desde la parte superior de la pantalla */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo de la pantalla (puedes usar 'right' en su lugar) */
+    z-index: 1000; /* Asegura que el sticker esté por encima de todos los demás elementos */
+    pointer-events: none; /* Opcional: permite que los clics pasen a través de la imagen a lo que está debajo */
+}
 
+.sticker-img {
+    width: 200px; /* Ajusta el tamaño del sticker como desees */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Opcional: añade bordes redondeados */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Opcional: añade una sombra para darle profundidad */
+    opacity: 0.8; /* Opcional: hace el sticker ligeramente transparente */
+}
 * {
     margin: 0;
     padding: 0;
@@ -87,14 +102,18 @@ nav ul li a:hover {
 
 .menu-toggle {
     display: none;
+    background: none;
+    border: none;
     color: var(--text-claro);
     font-size: 1.5rem;
     cursor: pointer;
+    padding: 5px;
+    line-height: 1;
 }
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1200') no-repeat center center/cover;
+    background: linear-gradient(rgba(36, 35, 35, 0.7), rgba(11, 11, 11, 0.7)), url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1200') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -106,7 +125,7 @@ nav ul li a:hover {
 
 .hero-content h2 {
     font-size: 3rem;
-    color: var(--color-secundario);
+    color: white;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -214,25 +233,156 @@ nav ul li a:hover {
     font-size: 2rem;
 }
 
-/* GALERIA */
-.galeria-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+/* GALERÍA */
+.galeria-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 28px;
 }
 
-.galeria-item img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: 0.3s;
+.galeria-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 2px solid var(--color-secundario);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--text-oscuro);
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.galeria-item img:hover {
-    transform: scale(1.03);
-    filter: brightness(1.1);
+.galeria-tab:hover,
+.galeria-tab.is-active {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.galeria-panel {
+    display: none;
+}
+
+.galeria-panel.is-active {
+    display: block;
+}
+
+.galeria-subtitle {
+    text-align: center;
+    color: var(--color-acento);
+    font-size: 1.15rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* CARRUSEL */
+.galeria-carousel {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 3px solid var(--color-secundario);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.45s ease;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+
+.carousel-slide img,
+.carousel-slide .carousel-video {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    background-color: #111;
+}
+
+.carousel-slide--embed {
+    background-color: #111;
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    height: 420px;
+}
+
+.video-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(14, 14, 14, 0.75);
+    color: var(--color-secundario);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-btn:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.carousel-prev {
+    left: -18px;
+}
+
+.carousel-next {
+    right: -18px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.carousel-dot {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    border: 2px solid var(--color-secundario);
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.carousel-dot.is-active,
+.carousel-dot:hover {
+    background-color: var(--color-secundario);
+}
+
+.carousel-dot.is-active {
+    transform: scale(1.15);
 }
 
 /* CONTACTO */
@@ -269,18 +419,58 @@ footer {
 /* RESPONSIVE DESIGN */
 @media(max-width: 768px) {
     header {
-        padding: 20px;
+        padding: 15px 20px;
+        flex-wrap: wrap;
     }
-    nav {
-        display: none; /* Se puede expandir con JS */
-    }
+
     .menu-toggle {
         display: block;
     }
+
+    nav {
+        flex-basis: 100%;
+        order: 3;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        padding: 10px 0 5px;
+        border-top: 1px solid rgba(184, 147, 67, 0.3);
+        margin-top: 10px;
+    }
+
+    header.nav-open nav ul {
+        display: flex;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 12px 5px;
+        text-align: center;
+    }
+
     .about-grid {
         grid-template-columns: 1fr;
     }
+
     .hero-content h2 {
         font-size: 2rem;
     }
 
+    .carousel-slide img,
+    .carousel-slide .carousel-video,
+    .video-embed {
+        height: 260px;
+    }
+
+    .carousel-prev {
+        left: 8px;
+    }
+
+    .carousel-next {
+        right: 8px;
+    }
+}
