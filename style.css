@@ -302,13 +302,13 @@ nav ul li a:hover {
     min-width: 100%;
 }
 
-.carousel-slide img,
-.carousel-slide .carousel-video {
-    display: block;
+.carousel-slide img {
     width: 100%;
-    height: 420px;
-    object-fit: cover;
-    background-color: #111;
+    height: 400px; /* O la altura que tengas definida */
+    object-fit: contain; /* Esta es la línea mágica */
+    background-color: #222; /* Un fondo gris oscuro/negro que se vea elegante */
+    display: block;
+
 }
 
 .carousel-slide--embed {
