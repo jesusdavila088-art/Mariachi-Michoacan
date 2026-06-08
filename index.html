@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariachi Michoacán </title>
+    <title>Mariachi Michoacán</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome para Iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- NAV / MENÚ DE NAVEGACIÓN -->
     <header>
         <div class="logo">
             <h1>Mariachi <span>Michoacán</span></h1>
@@ -28,10 +26,9 @@
         </nav>
     </header>
 
-    <!-- HERO SECTION (INICIO) -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <h2> Llevamos la mejor música en vivo a tus eventos
+            <h2>Llevamos la pasión y la mejor música en vivo a tus eventos</h2>
             <p>¡Haz que tu día especial sea inolvidable!</p>
              <a href="https://api.whatsapp.com/send/?phone=584247306647&text&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp-large">
                 <i class="fab fa-whatsapp"></i> Cotizar por WhatsApp
@@ -39,7 +36,6 @@
         </div>
     </section>
 
-    <!-- NOSOTROS -->
     <section id="nosotros" class="container">
         <div class="section-title">
             <h2>Quiénes Somos</h2>
@@ -55,7 +51,6 @@
         </div>
     </section>
 
-    <!-- REPERTORIO -->
     <section id="repertorio" class="bg-dark">
         <div class="container">
             <div class="section-title white">
@@ -82,7 +77,6 @@
         </div>
     </section>
 
-    <!-- GALERÍA -->
     <section id="galeria" class="container">
         <div class="section-title">
             <h2>Galería de Momentos</h2>
@@ -97,7 +91,6 @@
             </button>
         </div>
 
-        <!-- FOTOS: agrega más bloques .carousel-slide con tus imágenes en la carpeta imagenes/ -->
         <div class="galeria-panel is-active" id="galeria-fotos" role="tabpanel" aria-labelledby="tab-fotos">
             <div class="galeria-carousel" tabindex="0" aria-roledescription="carousel" aria-label="Carrusel de fotos">
                 <button type="button" class="carousel-btn carousel-prev" aria-label="Foto anterior">
@@ -105,13 +98,13 @@
                 </button>
                 <div class="carousel-viewport">
                     <div class="carousel-track">
-                        <div class="carousel-slide is-active"style="background-image: url('imagenes/WhatsApp Image 2026-04-20 at 13.47.12.jpeg');">
+                        <div class="carousel-slide is-active" style="background-image: url('imagenes/WhatsApp Image 2026-04-20 at 13.47.12.jpeg');">
                             <img src="imagenes/WhatsApp Image 2026-04-20 at 13.47.12.jpeg" alt="Mariachi Michoacán en evento 1">
                         </div>
                         <div class="carousel-slide" style="background-image: url('imagenes/WhatsApp Image 2026-04-20 at 13.49.26.jpeg');">
                             <img src="imagenes/WhatsApp Image 2026-04-20 at 13.49.26.jpeg" alt="Mariachi Michoacán en evento 2">
                         </div>
-                        <div class="carousel-slide"  style="background-image: url('imagenes/WhatsApp Image 2026-05-16 at 12.12.19.jpeg');">
+                        <div class="carousel-slide" style="background-image: url('imagenes/WhatsApp Image 2026-05-16 at 12.12.19.jpeg');">
                             <img src="imagenes/WhatsApp Image 2026-05-16 at 12.12.19.jpeg" alt="Mariachi Michoacán en evento 3">
                         </div>
                         <div class="carousel-slide" style="background-image: url('imagenes/imagenfondo.png');">
@@ -130,14 +123,8 @@
                             <img src="imagenes/imagen10.jpeg" alt="Mariachi Michoacan en evento 8">
                         </div>
                          <div class="carousel-slide" style="background-image: url('imagenes/imagen11.jpeg');">
-                            <img src="imagenes/imagen11.jpeg" alt="Mariachi Michoacan en evento 8">
+                            <img src="imagenes/imagen11.jpeg" alt="Mariachi Michoacan en evento 9">
                         </div>
-                        
-                        <!-- Copia el bloque anterior para más fotos:
-                        <div class="carousel-slide">
-                            <img src="imagenes/tu-foto.jpg" alt="Descripción del evento">
-                        </div>
-                        -->
                     </div>
                 </div>
                 <button type="button" class="carousel-btn carousel-next" aria-label="Foto siguiente">
@@ -147,7 +134,6 @@
             </div>
         </div>
 
-        <!-- VIDEOS: archivos en videos/ o enlaces de YouTube en el iframe -->
         <div class="galeria-panel" id="galeria-videos" role="tabpanel" aria-labelledby="tab-videos" hidden>
             <div class="galeria-carousel galeria-carousel--video" tabindex="0" aria-roledescription="carousel" aria-label="Carrusel de videos">
                 <button type="button" class="carousel-btn carousel-prev" aria-label="Video anterior">
@@ -155,30 +141,18 @@
                 </button>
                 <div class="carousel-viewport">
                     <div class="carousel-track">
-                        <div class="carousel-slide is-active">
-                            <video class="carousel-video" controls preload="metadata" poster="imagenes/WhatsApp Image 2026-04-20 at 13.47.12.jpeg">
-                                <source src="videos/evento-1.mp4" type="video/mp4">
-                                Tu navegador no reproduce video HTML5.
-                            </video>
-                        </div>
-                        <div class="carousel-slide carousel-slide--embed">
+                        <div class="carousel-slide carousel-slide--embed is-active">
                             <div class="video-embed">
-                                <!-- Cambia VIDEO_ID por el ID de tu video de YouTube (ej: dQw4w9WgXcQ) -->
                                 <iframe
-                                    src="https://youtu.be/W3ssrcVGz2Q?si=A81OiVORrcFmapxB"
+                                    src="https://www.youtube-nocookie.com/embed/W3ssrcVGz2Q"
                                     title="Video de Mariachi Michoacán"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen
-                                    loading="lazy"></iframe>
+                                    loading="lazy"
+                                    referrerpolicy="strict-origin-when-cross-origin">
+                                </iframe>
                             </div>
                         </div>
-                        <!-- Copia para otro video local:
-                        <div class="carousel-slide">
-                            <video class="carousel-video" controls preload="metadata" poster="imagenes/tu-miniatura.jpg">
-                                <source src="videos/evento-2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        -->
                     </div>
                 </div>
                 <button type="button" class="carousel-btn carousel-next" aria-label="Video siguiente">
@@ -189,7 +163,6 @@
         </div>
     </section>
 
-    <!-- CONTACTO / CONTRATACIONES -->
     <section id="contacto" class="bg-dark text-center">
         <div class="container">
             <div class="section-title white">
@@ -200,9 +173,9 @@
                 <p><i class="fas fa-map-marker-alt icon-gold"></i> San Cristóbal, Estado Táchira</p>
                 <p><i class="fas fa-phone icon-gold"></i> +58 424-730-6647</p>
                 <p>
-    <i class="fab fa-instagram icon-gold"></i> 
-    <a href="https://www.instagram.com/michoacan.sc/" target="_blank" class="link-instagram">@michoacan.sc</a>
-</p>
+                    <i class="fab fa-instagram icon-gold"></i> 
+                    <a href="https://www.instagram.com/michoacan.sc/" target="_blank" class="link-instagram">@michoacan.sc</a>
+                </p>
                 <div class="cta-block">
                     <a href="https://api.whatsapp.com/send/?phone=584247306647&text&type=phone_number&app_absent=0" target="_blank" class="btn-whatsapp-large">
                         <i class="fab fa-whatsapp"></i> Reservar Ahora por WhatsApp
@@ -212,12 +185,10 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2026 Mariachi Michoacán. Todos los derechos reservados. Diseñado para la gestión de servicios musicales.</p>
     </footer>
 
     <script src="app.js"></script>
 </body>
-    
 </html>
