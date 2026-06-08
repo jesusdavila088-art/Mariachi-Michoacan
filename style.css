@@ -113,7 +113,7 @@ nav ul li a:hover {
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(36, 35, 35, 0.7), rgba(11, 11, 11, 0.7)), url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1200') no-repeat center center/cover;
+    background: linear-gradient(rgba(36, 35, 35, 0.7), rgba(11, 11, 11, 0.7)), url('imagenes/imagenprin.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
