@@ -134,26 +134,27 @@
             </div>
         </div>
 
-        <div class="galeria-panel" id="galeria-videos" role="tabpanel" aria-labelledby="tab-videos" hidden>
-            <div class="galeria-carousel galeria-carousel--video" tabindex="0" aria-roledescription="carousel" aria-label="Carrusel de videos">
-                <button type="button" class="carousel-btn carousel-prev" aria-label="Video anterior">
-                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
-                </button>
-                <div class="carousel-viewport">
-                    <div class="carousel-track">
-                        <div class="carousel-slide carousel-slide--embed is-active">
-                            <div class="video-embed">
-                                <iframe
-                                    src="https://www.youtube-nocookie.com/embed/W3ssrcVGz2Q"
-                                    title="Video de Mariachi Michoacán"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen
-                                    loading="lazy"
-                                    referrerpolicy="strict-origin-when-cross-origin">
-                                </iframe>
-                            </div>
-                        </div>
-                    </div>
+       <div class="galeria-panel" id="galeria-videos" role="tabpanel" aria-labelledby="tab-videos" hidden>
+    <div class="galeria-carousel galeria-carousel--video" tabindex="0" aria-roledescription="carousel" aria-label="Carrusel de videos">
+        <button type="button" class="carousel-btn carousel-prev" aria-label="Video anterior">
+            <i class="fas fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <div class="carousel-viewport">
+            <div class="carousel-track">
+                
+                <div class="carousel-slide is-active">
+                    <video class="carousel-video" controls preload="metadata" style="width: 100%; object-fit: cover;">
+                        <source src="videos/mariachi-envivo.mp4" type="video/mp4">
+                        Tu navegador no reproduce video HTML5.
+                    </video>
+                </div>
+
+            </div>
+        </div>
+        <button type="button" class="carousel-btn carousel-next" aria-label="Video siguiente">
+            <i class="fas fa-chevron-right" aria-hidden="true"></i>
+        </button>
+        <div class="carousel-dots" role="tablist" aria-label="Seleccionar video">
                 </div>
                 <button type="button" class="carousel-btn carousel-next" aria-label="Video siguiente">
                     <i class="fas fa-chevron-right" aria-hidden="true"></i>
