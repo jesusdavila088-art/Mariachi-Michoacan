@@ -303,7 +303,6 @@ nav ul li a:hover {
 }
 
 /* Bloque actualizado para el efecto de desenfoque profesional */
-
 .carousel-slide {
     position: relative; /* Esencial para el efecto de fondo */
     overflow: hidden;   /* Mantiene el desenfoque dentro del marco */
@@ -321,7 +320,6 @@ nav ul li a:hover {
     width: auto;       /* Mantiene la proporción original */
     object-fit: contain;
 }
-
 /* Este es el truco: usamos la imagen como fondo borroso */
 .carousel-slide::before {
     content: '';
@@ -341,7 +339,6 @@ nav ul li a:hover {
     
     transform: scale(1.2); /* Un poco más grande para cubrir bordes */
     z-index: 1;            /* Detrás de la imagen principal */
-}
 }
 
 .carousel-slide--embed {
