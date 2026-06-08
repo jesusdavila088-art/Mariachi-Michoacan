@@ -489,6 +489,34 @@ footer {
     .hero-content h2 {
         font-size: 2rem;
     }
+    /* =======================================================
+   CORRECCIÓN GLOBAL: DESBLOQUEAR REPRODUCTOR DE YOUTUBE
+   ======================================================= */
+
+/* 1. Forzar al iframe a estar al frente de todo y recibir clics */
+.video-embed iframe {
+    width: 100% !important;
+    height: 100% !important;
+    position: relative;
+    z-index: 99 !important;
+    pointer-events: auto !important;
+}
+
+/* 2. Asegurar que el contenedor permita el paso de interacciones */
+.video-embed {
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 90;
+}
+
+/* 3. Hacer que los bordes dorados o capas decorativas del carrusel sean 'fantasma' */
+/* (Dejan pasar los clics hacia el fondo sin estorbar) */
+.carousel-slide::before,
+.carousel-slide::after,
+.video-embed::before,
+.video-embed::after {
+    pointer-events: none !important;
+}
 
     .carousel-slide img,
     .carousel-slide .carousel-video,
@@ -502,5 +530,4 @@ footer {
 
     .carousel-next {
         right: 8px;
-    }
 }
