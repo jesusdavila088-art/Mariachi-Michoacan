@@ -113,7 +113,7 @@ nav ul li a:hover {
 
 /* HERO SECTION */
 .hero {
-    background: linear-gradient(rgba(36, 35, 35, 0.7), rgba(11, 11, 11, 0.7)), url('imagenes/michoacanfondo.jpg') no-repeat center center/contain;
+    background: linear-gradient(rgba(36, 35, 35, 0.7), rgba(11, 11, 11, 0.7)), url('imagenes/michoacanfondo.jpg') no-repeat center top/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
