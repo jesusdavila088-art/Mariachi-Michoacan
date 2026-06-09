@@ -531,3 +531,34 @@ footer {
     .carousel-next {
         right: 8px;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px !important; /* Le da más aire arriba y abajo al contenedor */
+        background-position: center center !important; /* Centra perfectamente la imagen de fondo */
+    }
+
+    .hero-content {
+        max-width: 100% !important;
+        padding: 0 5px !important;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem !important; /* Achica el título para que no ocupe toda la pantalla */
+        line-height: 1.4 !important;  /* Separa las líneas de texto para que respiren */
+        margin-bottom: 15px !important;
+        letter-spacing: 0.5px !important;
+    }
+
+    .hero p {
+        font-size: 1.1rem !important; /* Ajusta el subtítulo en teléfonos */
+        margin-bottom: 30px !important;
+    }
+
+    .btn-whatsapp-large {
+        font-size: 1rem !important;       /* Ajusta el tamaño del texto del botón */
+        padding: 14px 24px !important;    /* Lo hace cómodo para tocar con el dedo */
+        display: inline-block !important;
+        width: auto !important;           /* Evita que el botón se estire feo a los lados */
+    }
+}
